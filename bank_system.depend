@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1757209461 source:e:\bank_system\bank_system\main.cpp
+	<iostream>
+	"Person.h"
+	"Client.h"
+
+1757209652 e:\bank_system\bank_system\include\person.h
+	"Valid.h"
+	<iostream>
+	<string>
+
+1757209751 e:\bank_system\bank_system\include\client.h
+	<iostream>
+	<string>
+	"Person.h"
+	"Valid.h"
+
+1757209874 e:\bank_system\bank_system\include\valid.h
+	<iostream>
+	<string>
+
