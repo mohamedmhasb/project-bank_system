@@ -1,11 +1,9 @@
-#ifndef CLIENT_H
-#define CLIENT_H
+//#ifndef CLIENT_H
+//#define CLIENT_H
 
-
-#include <iostream>
-#include<string>
+//==================== Client =============================
 #include "Person.h"
-#include"Valid.h"
+#pragma once
 using namespace std;
 
 
@@ -13,35 +11,27 @@ using namespace std;
 class Client :public Person {
     double balance;
 public:
-    Client() {
-        balance = 0;
+    Client() : Person() {
+        this ->balance = 0.0;
     }
-    Client(int id, string name, string password, double balance):
-        Person(id, name, password) {
-        setBalance(balance);
+    Client( string name,int id, string password, double balance):
+        Person( name,id, password) {
+          this -> balance =balance;
     }
     void setBalance(double balance) {
-        if (balance > 1500) {
-            this->balance = balance;
-        }
-        else {
-            double x;
-            cout << "your balance must be great than 1500";
-            cin >> x;
-            setBalance(x);
-        }
-
+        this -> balance = balance;
     }
     double getBalance() {
         return this->balance;
     }
 
     double withdraw(double amount) {
-        if (amount <= balance) {
+        if (amount <=  this ->balance) {
             this->balance -= amount;
+            cout << "\nSuccessful transaction.\n";
         }
         else {
-            cout << "Amount exceeded balance ";
+            cout << "\nAmount exceeded balance\n";
         }
         return this->balance;
     }
@@ -49,27 +39,30 @@ public:
         if (balance >= amount) {
             this->balance -= amount;
             another.deposit(amount);
+            cout << "\nSuccessful transaction.\n";
         }
         else {
-            cout << "Amount exceeded balance ";
+            cout << "\nAmount exceeded balance\n";
         }
         return this->balance;
     }
+    void checkBalance(){
+        cout << "Balance: "<< this ->balance<<endl;
+    }
 
     double deposit(double amount) {
+        cout << "\nSuccessful transaction.\n";
         return this->balance += amount;
     }
 
 
     void displayFun() {
-        cout << "ID = " << getId() << endl;
-        cout << "Name = " << getName() << endl;
-        cout << "Password = " << getPassword() << endl;
+        Person ::displayFun();
         cout << "Balance = : " << getBalance() << endl;
-        cout << "\n===========================\n";
+
     }
 
 };
-#endif // PERSON_H
+//#endif // PERSON_H
 
 

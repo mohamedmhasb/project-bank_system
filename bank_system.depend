@@ -19,3 +19,30 @@
 	<iostream>
 	<string>
 
+1757469361 source:e:\project_bank_system in code blocks\project-bank_system\main.cpp
+	<iostream>
+	"Person.h"
+	"Client.h"
+	"Employee.h"
+	"Admin.h"
+	"Valid.h"
+
+1757468594 e:\project_bank_system in code blocks\project-bank_system\include\person.h
+	"Valid.h"
+	<iostream>
+	<string>
+
+1757469323 e:\project_bank_system in code blocks\project-bank_system\include\valid.h
+	<iostream>
+	<string>
+
+1757468616 e:\project_bank_system in code blocks\project-bank_system\include\client.h
+	"Person.h"
+
+1757468640 e:\project_bank_system in code blocks\project-bank_system\include\employee.h
+	"Client.h"
+	"Person.h"
+
+1757468904 e:\project_bank_system in code blocks\project-bank_system\include\admin.h
+	"Employee.h"
+

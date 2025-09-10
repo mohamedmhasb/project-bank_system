@@ -1,8 +1,11 @@
-#ifndef PERSON_H
-#define PERSON_H
+//#ifndef PERSON_H
+//#define PERSON_H
+//===================== Person ======================
+#pragma once
 #include"Valid.h"
 #include <iostream>
 #include<string>
+
 using namespace std;
 
 
@@ -16,7 +19,7 @@ public:
     Person() {
           id = 0;
     }
-    Person( int id,string name, string password) {
+    Person( string name,int id, string password) {
         this->id=id;
         setName(name);
         setPassword(password);
@@ -25,43 +28,13 @@ public:
         this->id = id;
     }
     void setName(string name) {
-       // bool flag = false;
-        //for (int i = 0;i < name.size();i++) {
-         //   flag = false;
-        //    if (isalpha(name[i]) && name.size() > 5 && name.size() < 20) {
-              //  flag = true;
-        //    }
-       // }
-        bool flag = Valid::CheckName(name);
-
-        if (flag == true) {
-            this->name = name;
-            cout << "Name recorded succesfuly\n";
-        }
-        else {
-            string x;
-            cout << "Name must contain only letters and contain";
-              cout << " 5:20 leter : ";
-            cin >> x;
-            setName(x);
-
+        this->name = name;
         }
 
-    }
     void setPassword(string password) {
-        bool flag = Valid ::CheckPassword(password);
-        if (flag == true) {
-            this->password = password;
-            cout << "Password recoreded succesfully\n";
+        this->password = password;
         }
-        else {
-            string x;
-            cout << "Password must contain 5:20 leter : ";
-            cin >> x;
-            setPassword(x);
 
-        }
-    }
     int getId() {
         return this->id;
     }
@@ -75,11 +48,11 @@ public:
         cout << "ID = " << getId() << endl;
         cout << "Name = " << getName() << endl;
         cout << "Password = " << getPassword() << endl;
-        cout << "\n===========================\n";
+
     }
 };
 
 
 
 
-#endif // PERSON_H
+//#endif // PERSON_H
